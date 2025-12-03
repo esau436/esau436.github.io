@@ -1,0 +1,127 @@
+/* Estilos Generales - Más limpio y simple */
+body {
+    font-family: 'Times New Roman', Times, serif; /* Fuente más clásica */
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #000000;
+    line-height: 1.5;
+}
+
+header {
+    background-color: #ffffff; 
+    color: #000000;
+    padding: 20px 0 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #000000; /* Separador simple */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    text-transform: uppercase; /* MAYÚSCULAS para el título */
+}
+
+header p {
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+main {
+    padding: 30px 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: white;
+    /* Eliminamos las sombras para un look más de impresión */
+}
+
+/* Estilos de la Sección del Menú */
+.menu-section {
+    margin-bottom: 30px;
+}
+
+.menu-section h2 {
+    font-family: Arial, sans-serif; /* Un contraste simple */
+    font-size: 1.5em;
+    text-transform: uppercase; /* Título de sección en mayúsculas */
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Estilos de los Items del Menú - La clave para la lista */
+.menu-item {
+    display: flex;
+    justify-content: space-between; /* Alinea nombre a la izq y precio a la der */
+    align-items: flex-start;
+    padding: 5px 0;
+    border-bottom: 1px dotted #ccc; /* Línea de puntos sutil */
+    flex-direction: column; /* Apila nombre/precio y descripción */
+}
+
+.menu-item:last-child {
+    border-bottom: 1px dotted #ccc; /* Mantenemos la línea en todos para uniformidad, excepto antes de la nueva sección */
+}
+
+.item-line {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.item-name {
+    font-weight: normal;
+    font-size: 1em;
+}
+
+.item-price {
+    font-weight: bold;
+    font-size: 1em;
+    flex-shrink: 0; /* Asegura que el precio no se comprima */
+}
+
+.item-description, .accompanying-text {
+    font-size: 0.85em;
+    font-style: italic;
+    color: #555;
+    margin-top: 2px;
+    margin-bottom: 5px;
+}
+
+.accompanying-text {
+    font-style: normal;
+    margin-bottom: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    font-size: 0.9em;
+}
+
+/* Estilos del Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 0.9em;
+    border-top: 2px solid #000000;
+}
+
+footer p {
+    margin: 5px 0;
+}
+/* Contenedor de la foto */
+.item-photo {
+    flex-basis: 30%; 
+    max-width: 150px; /* Ancho máximo para el contenedor de la foto */
+    border-radius: 8px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.item-photo img {
+    width: 100%; /* La imagen siempre ocupará el 100% del ancho de su contenedor (.item-photo) */
+    height: 120px; /* <--- ESTE VALOR FIJA LA ALTURA ESTÁNDAR */
+    display: block;
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse, recortando si es necesario */
+}
